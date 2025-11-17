@@ -1,0 +1,1245 @@
+
+Conversation with Gemini
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Media Gallery</title>
+
+<link rel="stylesheet" href="style.css1">
+
+
+
+<style>
+
+/* General Grid and Category Layout */
+
+.category {
+
+margin: 20px 0;
+
+}
+
+
+
+.category h2 {
+
+font-size: 24px;
+
+margin-bottom: 10px;
+
+}
+
+
+
+.media-grid {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+gap: 15px;
+
+}
+
+
+
+/* Video Poster Styling */
+
+.video-poster {
+
+position: relative;
+
+cursor: pointer;
+
+overflow: hidden;
+
+border-radius: 12px;
+
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+/* Add some margin for posters outside of media-grid, like News */
+
+margin-top: 15px;
+
+}
+
+
+
+.video-poster img {
+
+width: 100%;
+
+display: block;
+
+transition: transform 0.3s ease;
+
+border-radius: 12px; /* Ensure images also have rounded corners */
+
+}
+
+
+
+.video-poster:hover img {
+
+transform: scale(1.05);
+
+}
+
+
+
+.play-btn {
+
+position: absolute;
+
+top: 50%;
+
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+font-size: 50px;
+
+color: white;
+
+background: rgba(0,0,0,0.5);
+
+border-radius: 50%;
+
+padding: 10px 15px;
+
+transition: background 0.3s ease;
+
+/* For the smaller play buttons in Motivation/Audio */
+
+font-size: 40px;
+
+padding: 10px;
+
+}
+
+
+
+/* Founder Section Styling */
+
+.founder-info {
+
+display: flex;
+
+gap: 20px;
+
+margin-top: 20px;
+
+align-items: flex-start;
+
+}
+
+
+
+.member {
+
+flex: 1;
+
+text-align: center;
+
+}
+
+
+.founder-img {
+
+width: 150px;
+
+height: 150px;
+
+object-fit: cover;
+
+border-radius: 50%;
+
+border: 4px solid #f55050;
+
+}
+
+
+
+.founder-text {
+
+text-align: left;
+
+padding: 10px;
+
+}
+
+
+
+/* Sports Links Layout */
+
+.sports-links-grid {
+
+display: grid;
+
+grid-template-columns: 1fr 1fr; /* Two columns for links */
+
+gap: 20px;
+
+margin-top: 15px;
+
+}
+
+
+
+.sports-links-grid ul {
+
+list-style: none;
+
+padding: 0;
+
+}
+
+
+.sports-links-grid ul li {
+
+margin-bottom: 8px;
+
+}
+
+
+.sports-links-grid ul:nth-child(2) {
+
+text-align: right;
+
+}
+
+/* Founder css code */
+
+/*
+
+.founder-info {
+
+display: flex
+
+flex-wrap: wrap;
+
+gap: 20px;
+
+justify-content: center;
+
+}
+
+
+
+.member {
+
+background: #fff;
+
+border-radius: 12px;
+
+box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+
+width: 300px;
+
+overflow: hidden;
+
+transition: transform 0.3s;
+
+}
+
+
+
+.member:hover {
+
+transform: translateY(-5px);
+
+}
+
+
+
+.founder-img {
+
+width: 100%;
+
+height: 200px;
+
+object-fit: cover;
+
+}
+
+
+
+.founder-text {
+
+padding: 15px;
+
+font-size: 14px;
+
+color: #333;
+
+}
+
+
+
+.founder-text h3 {
+
+margin-top: 0;
+
+margin-bottom: 8px;
+
+color: #222;
+
+}
+
+
+
+.role {
+
+padding: 6px 8px;
+
+border-radius: 5px;
+
+margin-bottom: 8px;
+
+font-weight: 500;
+
+}
+
+
+
+/* Different colors for roles */
+
+.founder .role { background-color: #f6e58d; }
+
+.cofounder .role { background-color: #74b9ff; color: #000; }
+
+.team1 .role { background-color: #55efc4; }
+
+.team2 .role { background-color: #ffb142; }
+
+
+
+/* Links styling */
+
+.founder-text a {
+
+color: #0984e3;
+
+text-decoration: none;
+
+}
+
+
+
+.founder-text a:hover {
+
+text-decoration: underline;
+
+}
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px){
+
+.member { width: 90%; }
+
+} */
+
+</style>
+
+</head>
+
+<body>
+
+<header
+
+style="text-align: center; background-color: #f0f0f0; padding: 20px;">
+
+<h1 style="margin: 0; font-size: 2.5rem; color: #333;">Media
+
+Gallery</h1>
+
+<p style="font-size: 1.2rem; color: #555;">
+
+Watch videos and listen to audio from different categories
+
+</p>
+
+</header>
+
+
+
+<main>
+
+<section class="category">
+
+<h2>🎵 Music Videos</h2>
+
+<p
+
+style="background-color: rgb(241, 121, 121); padding: 10px; border-radius: 8px;">
+
+Chhath Puja is one of the most important festivals dedicated
+
+to the Sun God (Surya) and Chhathi Maiya... (Full
+
+description)
+
+</p>
+
+<div class="media-grid">
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/BKoD7bTLc2k?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/BKoD7bTLc2k/hqdefault.jpg"
+
+alt="JoDe JoDe Falwa - Pawan Singh">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/GljkiVCbmbg?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/GljkiVCbmbg/hqdefault.jpg"
+
+alt="Ghatye Swarg Lagela - Pawan Singh">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="category">
+
+<h2>🎯 Motivational Videos</h2>
+
+<p
+
+style="background-color: rgb(235, 144, 144); padding: 10px; border-radius: 8px; color: black;">
+
+Khan Sir from Patna is one of the most popular teachers in
+
+India, known for his unique and humorous way of teaching...
+
+(Full description)
+
+</p>
+
+<div class="media-grid">
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/qxUuXHJVN3Q?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/qxUuXHJVN3Q/hqdefault.jpg"
+
+alt="Khan Sir Teaching Style">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+<!-- PW (Physics Wallah) CAT Preparation Video -->
+
+<div class="video-post"
+
+style="text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.2); border-radius:12px; padding:15px;">
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;220&quot; src=&quot;https://www.youtube.com/embed/_av_legE5Yw?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'"
+
+style="position:relative; cursor:pointer; border-radius:10px; overflow:hidden;">
+
+
+
+<img
+
+src="https://img.youtube.com/vi/_av_legE5Yw/hqdefault.jpg"
+
+alt="PW CAT Preparation 2025"
+
+style="width:100%; border-radius:10px;">
+
+
+
+<div class="play-btn"
+
+style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+
+background:rgba(0,0,0,0.6); color:#fff; font-size:30px;
+
+padding:10px 18px; border-radius:50%;">
+
+▶
+
+</div>
+
+</div>
+
+
+
+<h3 style="margin-top:12px; color:#222;">PW - CAT
+
+Preparation 2025</h3>
+
+<p style="margin:8px 0;">
+
+🧠 Watch more on
+
+<a href="https://www.youtube.com/@PW-Foundation"
+
+target="_blank"
+
+style="color:#0b4a6f; text-decoration:none; font-weight:bold;">
+
+Physics Wallah YouTube Channel
+
+</a>
+
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/i528jzZGKQ4?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/i528jzZGKQ4/hqdefault.jpg"
+
+alt="Khan Sir Motivation">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="category">
+
+<h2>🎬 Entertainment Videos</h2>
+
+<p
+
+style="background-color: rgb(211, 173, 173); padding: 10px; border-radius: 8px;">
+
+The Kapil Sharma Show is one of India's most loved comedy
+
+programs. Hosted by Kapil Sharma, the show brings laughter,
+
+fun... (Full description)
+
+</p>
+
+
+
+<div class="media-grid">
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/BEzBSkBBvJw?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/BEzBSkBBvJw/hqdefault.jpg"
+
+alt="Kapil Sharma Show - Latest Episode">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/0sTitdW5Evs?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/0sTitdW5Evs/hqdefault.jpg"
+
+alt="Kapil Sharma Show - Funny Moments Compilation">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="category">
+
+<h2>🎧 Audio Tracks</h2>
+
+<p
+
+style="background-color: rgb(155, 124, 124); padding: 10px; border-radius: 8px; color: white;">
+
+Music is a universal language that connects hearts and
+
+souls. Whether it’s devotional songs sung during
+
+festivals... (Full description)
+
+</p>
+
+
+
+<div class="media-grid">
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/BKoD7bTLc2k?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/BKoD7bTLc2k/hqdefault.jpg"
+
+alt="JoDe JoDe Falwa - Pawan Singh">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/3JWTaaS7LdU?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/3JWTaaS7LdU/hqdefault.jpg"
+
+alt="I Will Always Love You - Whitney Houston">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/2Vv-BfVoq4g/hqdefault.jpg"
+
+alt="Perfect - Ed Sheeran">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/YQHsXMglC9A?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/YQHsXMglC9A/hqdefault.jpg"
+
+alt="Someone Like You - Adele">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="category">
+
+<h2>🎓 Educational Videos (Hindi & English Courses)</h2>
+
+<p
+
+style="background-color: rgb(173, 216, 230); color: black; padding: 10px; border-radius: 8px;">
+
+Watch the best educational YouTube channels for UPSC, CAT,
+
+and Government Job preparation.
+
+Courses available in both Hindi and English mediums with
+
+expert teachers.
+
+</p>
+
+
+
+<div class="education-links">
+
+<ul>
+
+<li>🔗 <a
+
+href="https://www.youtube.com/@DrishtiIASofficial"
+
+target="_blank" style="color:#0056b3;">Drishti
+
+IAS – UPSC (Hindi Medium)</a></li>
+
+<li>🔗 <a
+
+href="https://www.youtube.com/@BikashEducation"
+
+target="_blank" style="color:#0056b3;">Bikash
+
+Education – UPSC Preparation</a></li>
+
+<li>🔗 <a href="https://www.youtube.com/@pwuniverse"
+
+target="_blank" style="color:#0056b3;">Physics
+
+Wallah – CAT & Aptitude Courses</a></li>
+
+<li>🔗 <a
+
+href="https://www.youtube.com/@Adda247Official"
+
+target="_blank" style="color:#0056b3;">Adda247 –
+
+Government Jobs (Bank, SSC, Railway)</a></li>
+
+<li>🔗 <a href="https://www.youtube.com/@StudyIQIAS"
+
+target="_blank" style="color:#0056b3;">StudyIQ
+
+IAS – GK, English & Current Affairs</a></li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+
+<section class="category">
+
+<h2>🏏 Sports Highlights</h2>
+
+<p
+
+style="background-color: rgb(209, 120, 120); color: white; padding: 10px; border-radius: 8px;">
+
+Sports highlights capture the most thrilling and
+
+unforgettable moments from matches across the world... (Full
+
+description)
+
+</p>
+
+
+
+<div class="sports-links-grid">
+
+<ul>
+
+<li><a href="https://www.espncricinfo.com/"
+
+target="_blank">📰 Read Latest Cricket
+
+News</a></li>
+
+<li><a href="https://www.fifa.com/" target="_blank">🌐
+
+Official FIFA Website</a></li>
+
+<li><a href="https://www.olympic.org/"
+
+target="_blank">🎖 Olympic Official
+
+Website</a></li>
+
+<li><a href="https://www.prokabaddi.com/"
+
+target="_blank">🤾‍♂️ Pro Kabaddi League
+
+Official</a></li>
+
+<li><a href="https://www.hockeyindia.org/"
+
+target="_blank">🏑 Hockey India
+
+Official</a></li>
+
+<li><a
+
+href="https://www.espncricinfo.com/player/virat-kohli-253802"
+
+target="_blank">🏅 Player Profile - Virat
+
+Kohli</a></li>
+
+</ul>
+
+
+
+<ul>
+
+<li><a
+
+href="https://www.youtube.com/watch?v=2Vv-BfVoq4g"
+
+target="_blank">🎥 Cricket Match
+
+Highlights</a></li>
+
+<li><a
+
+href="https://www.youtube.com/watch?v=aqvX9n3W0Ts"
+
+target="_blank">⚽ Football Highlights</a></li>
+
+<li><a
+
+href="https://www.youtube.com/watch?v=MpQXGkx6f2E"
+
+target="_blank">🏅 Olympic Highlights</a></li>
+
+<li><a
+
+href="https://www.youtube.com/watch?v=Fy5d5H6qK5M"
+
+target="_blank">🎾 Tennis Highlights</a></li>
+
+<li><a
+
+href="https://www.youtube.com/watch?v=TwCvb4T8O9g"
+
+target="_blank">🏑 Hockey Highlights</a></li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+
+<section class="category">
+
+<h2>🍳 Cooking Videos</h2>
+
+<p
+
+style="background-color: rgb(134, 224, 134); padding: 10px; border-radius: 8px;">
+
+Cooking videos are a great way to learn delicious recipes
+
+step by step. From traditional dishes like biryani... (Full
+
+description)
+
+</p>
+
+
+
+<div class="media-grid">
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/4aZr5hZXP_s?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/4aZr5hZXP_s/hqdefault.jpg"
+
+alt="How to Cook Biryani">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/CM0J-pkbcHY?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/CM0J-pkbcHY/hqdefault.jpg"
+
+alt="Indian Cooking: Dal Recipe">
+
+<div class="play-btn">▶</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="category">
+
+<h2>🌍 News & Documentaries</h2>
+
+<p
+
+style="background-color: rgb(72, 230, 58); color: black; padding: 10px; border-radius: 8px;">
+
+Stay informed and inspired with news and documentary videos.
+
+News clips keep you updated with the latest events... (Full
+
+description)
+
+</p>
+
+<div class="media-grid">
+
+<!-- Republic Bharat Live News -->
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/nyd-xznCpJc?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/nyd-xznCpJc/hqdefault.jpg"
+
+alt="Republic Bharat Live News">
+
+<div class="play-btn">▶</div>
+
+<div
+
+style="position:absolute; top:10px; left:10px; background:red; color:white; padding:3px 8px; border-radius:5px; font-weight:bold;">LIVE</div>
+
+</div>
+
+<!-- Dushra live news code -->
+
+<div class="video-poster"
+
+onclick="this.innerHTML='<iframe width=&quot;100%&quot; height=&quot;200&quot; src=&quot;https://www.youtube.com/embed/nyd-xznCpJc?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>'">
+
+<img
+
+src="https://img.youtube.com/vi/nyd-xznCpJc/hqdefault.jpg"
+
+alt="Republic Bharat Live News">
+
+<div class="play-btn">▶</div>
+
+<div
+
+style="position:absolute; top:10px; left:10px; background:red; color:white; padding:3px 8px; border-radius:5px; font-weight:bold;">LIVE</div>
+
+</div>
+
+<!-- LIVE Badge -->
+
+<div style="
+
+position:absolute;
+
+top:10px;
+
+left:10px;
+
+background:red;
+
+color:white;
+
+padding:3px 8px;
+
+border-radius:5px;
+
+font-weight:bold;">
+
+LIVE
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="category founder">
+
+<h2>👤 Our Team</h2>
+
+<p
+
+style="background-color: rgb(245, 80, 80); padding: 10px; border-radius: 8px; color: white;">
+
+Meet the dedicated team behind <strong>Media
+
+Gallery</strong>. Our founders and partners work
+
+tirelessly
+
+to curate high-quality content, maintain innovation, and
+
+deliver the best experience to our users.
+
+</p>
+
+
+
+<div class="founder-info">
+
+<!-- Founder -->
+
+<div class="member">
+
+<img
+
+src="c:\Users\USER\Videos\SHIWAM.PHO\1000055037.jpg"
+
+alt="Founder Image" class="founder-img">
+
+<div class="founder-text">
+
+<h3>Shiwam Dwivedi</h3>
+
+<p
+
+style="background-color: rgb(223, 223, 82); padding: 5px; border-radius: 5px;">
+
+Founder & CEO of Media Gallery. He oversees
+
+the
+
+entire platform, ensuring quality
+
+content and smooth user experience.
+
+</p>
+
+<p><strong>📍 Address:</strong> Gopalganj, Bihar
+
+841426, India</p>
+
+<p><strong>📧 Email:</strong> <a
+
+href="mailto:shiwamdwivedi125@gmail.com">shiwamdwivedi@gmail.com</a></p>
+
+<p><strong>📞 Mobile:</strong> +91
+
+8340119050</p>
+
+<p><strong>🔗 LinkedIn:</strong> <a
+
+href="https://www.linkedin.com/in/shiwamdwivedi125 target="_blank">linkedin.com/in/shiwamdwivedi</a></p>
+
+</div>
+
+</div>
+
+
+
+<!-- Co-Founder -->
+
+<div class="member">
+
+<img
+
+src="c:\Users\USER\Downloads\sanker dwivedi.jpg"
+
+alt="Co-Founder Image" class="founder-img">
+
+<div class="founder-text">
+
+<h3>Ravi Shankar Dwivedi</h3>
+
+<p
+
+style="background-color: rgb(102, 178, 255); padding: 5px; border-radius: 5px;">
+
+Co-Founder & Technical Head. He manages web
+
+development, media integration, and overall
+
+technology.
+
+</p>
+
+<p><strong>📍 Address:</strong> Lucknow, Uttar
+
+Pradesh, India</p>
+
+<p><strong>📧 Email:</strong> <a
+
+href="mailto:ravidwivedi555@gmail.com">ravidwivedi555@gmail.com</a></p>
+
+<p><strong>📞 Mobile:</strong> +91
+
+8826499819</p>
+
+<p><strong>🔗 LinkedIn:</strong> <a
+
+href="https://www.linkedin.com/in/ravishankar"
+
+target="_blank">linkedin.com/in/ravisankar</a></p>
+
+</div>
+
+</div>
+
+
+
+<!-- Team Member 1 -->
+
+<div class="member">
+
+<img
+
+src="c:\Users\USER\Videos\SHIWAM.PHO\1000009779.jpg"
+
+alt="Team Member Image" class="founder-img">
+
+<div class="founder-text">
+
+<h3>Pritam Dwivedi</h3>
+
+<p
+
+style="background-color: rgb(140, 240, 120); padding: 5px; border-radius: 5px;">
+
+Content Curator. She ensures all media
+
+content
+
+is accurate, engaging, and meets community
+
+standards.
+
+</p>
+
+<p><strong>📍 Address:</strong>Gopalganj, Patna,
+
+Bihar, India</p>
+
+<p><strong>📧 Email:</strong> <a
+
+href="mailto:pritamdwivedi258@gmail.com">pritamdwivedi258@gmail.com</a></p>
+
+<p><strong>📞 Mobile:</strong> +91
+
+9508162670</p>
+
+<p><strong>🔗 LinkedIn:</strong> <a
+
+href="https://www.linkedin.com/in/pritamdwivedi"
+
+target="_blank">linkedin.com/in/pritamdwivedi</a></p>
+
+</div>
+
+</div>
+
+
+
+<!-- Team Member 2 -->
+
+<div class="member">
+
+<img src="c:\Users\USER\Downloads\pawan dwivedi.jpg"
+
+alt="Team Member Image" class="founder-img">
+
+<div class="founder-text">
+
+<h3>Pawan Dwivedi</h3>
+
+<p
+
+style="background-color: rgb(255, 204, 153); padding: 5px; border-radius: 5px;">
+
+Marketing & Social Media Lead. He promotes
+
+Media
+
+Gallery and manages audience engagement
+
+worldwide.
+
+</p>
+
+<p><strong>📍 Address:</strong> Varanasi, Uttar
+
+Pradesh, India</p>
+
+<p><strong>📧 Email:</strong> <a
+
+href="mailto:dwivedipawan837@gmail.com">dwivedipawan837@gmail.com</a></p>
+
+<p><strong>📞 Mobile:</strong> +91
+
+9608171570</p>
+
+<p><strong>🔗 LinkedIn:</strong> <a
+
+href="https://www.linkedin.com/in/dwivedipawan837"
+
+target="_blank">linkedin.com/in/dwivedipawan837</a></p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+<script type="module" src="script.js"></script>
+</body>
+
+</html>

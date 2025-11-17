@@ -1,0 +1,389 @@
+/* Global Reset and Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+.page-header {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Category Layout */
+.category {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.category h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.category-description {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Category Background Colors (for descriptions) */
+.music-bg {
+    background-color: rgb(241, 121, 121);
+    color: white;
+}
+
+.motivation-bg {
+    background-color: rgb(235, 144, 144);
+    color: black;
+}
+
+.entertainment-bg {
+    background-color: rgb(211, 173, 173);
+    color: black;
+}
+
+.audio-bg {
+    background-color: rgb(155, 124, 124);
+    color: white;
+}
+
+.education-bg {
+    background-color: rgb(173, 216, 230);
+    color: black;
+}
+
+.sports-bg {
+    background-color: rgb(209, 120, 120);
+    color: white;
+}
+
+.cooking-bg {
+    background-color: rgb(134, 224, 134);
+    color: black;
+}
+
+.news-bg {
+    background-color: rgb(72, 230, 58);
+    color: black;
+}
+
+.team-bg {
+    background-color: rgb(245, 80, 80);
+    color: white;
+}
+
+/* Media Grid Layout */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Video Poster Styling */
+.video-poster {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    height: 200px;
+    /* Standard height for consistency */
+}
+
+.video-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures image covers the poster area */
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+
+.video-poster:hover img {
+    transform: scale(1.05);
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease, font-size 0.3s ease;
+}
+
+.video-poster:hover .play-btn {
+    background: rgba(255, 0, 0, 0.8);
+}
+
+.small-play-btn {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
+
+/* Video Card for custom content (like PW) */
+.video-card {
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.video-card .video-poster {
+    margin-bottom: 10px;
+    height: 180px;
+}
+
+.video-title {
+    margin-top: 12px;
+    color: #222;
+    font-size: 1.1rem;
+}
+
+.video-link a {
+    color: #0b4a6f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.video-link a:hover {
+    text-decoration: underline;
+}
+
+/* LIVE Badge for News */
+.video-poster.live {
+    position: relative;
+}
+
+.live-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 10;
+}
+
+/* Educational Links Layout */
+.education-links ul,
+.sports-links-grid ul {
+    list-style: none;
+    padding: 0;
+}
+
+.education-links ul li {
+    margin-bottom: 10px;
+}
+
+.education-links a {
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.education-links a:hover {
+    text-decoration: underline;
+}
+
+/* Sports Links Layout */
+.sports-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.sports-links-grid ul li {
+    margin-bottom: 12px;
+}
+
+.sports-links-grid ul:nth-child(2) {
+    text-align: right;
+}
+
+.sports-links-grid a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sports-links-grid a:hover {
+    color: #f55050;
+    text-decoration: underline;
+}
+
+/* Founder Section Styling (Improved) */
+.founder-section {
+    padding-bottom: 40px;
+}
+
+.founder-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.member {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.founder-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 4px solid #f55050;
+    /* Highlighted border */
+    border-radius: 0;
+    /* Remove old rounded corner styling */
+}
+
+.founder-text {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    /* Ensure text is left-aligned within the text block */
+}
+
+.founder-text h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #222;
+    font-size: 1.5rem;
+}
+
+.role {
+    padding: 6px 8px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+}
+
+/* Role specific colors */
+.founder-role-color {
+    background-color: #f6e58d;
+}
+
+/* Yellowish */
+.cofounder-role-color {
+    background-color: #74b9ff;
+}
+
+/* Bluish */
+.team1-role-color {
+    background-color: #55efc4;
+}
+
+/* Greenish */
+.team2-role-color {
+    background-color: #ffb142;
+}
+
+/* Orangish */
+
+.founder-text p {
+    margin-bottom: 10px;
+}
+
+.founder-text a {
+    color: #0984e3;
+    text-decoration: none;
+}
+
+.founder-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .sports-links-grid {
+        grid-template-columns: 1fr;
+        /* Single column on smaller screens */
+    }
+
+    .sports-links-grid ul:nth-child(2) {
+        text-align: left;
+        /* Align right-column links left too */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .media-grid {
+        grid-template-columns: 1fr;
+        /* Single column grid for videos */
+    }
+
+    .member {
+        width: 100%;
+    }
+}
